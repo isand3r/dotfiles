@@ -1,7 +1,12 @@
+" Spacing
 set shiftwidth=2
 set tabstop=2
 set backspace=2
 set expandtab
+
+" Search
+set hlsearch
+set incsearch
 
 " vim plug plugin manager
 call plug#begin('~/.vim/plugged')
