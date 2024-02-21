@@ -10,12 +10,10 @@ set incsearch
 
 " vim plug plugin manager
 call plug#begin('~/.vim/plugged')
-" Plug 'rust-lang/rust.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'itchyny/lightline.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
-Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'hashivim/vim-terraform'
 Plug 'jvirtanen/vim-hcl'
