@@ -47,3 +47,7 @@ export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1
 
 alias k=kubectl
 alias jwtdecode="jq -rR 'split(\".\") | .[0],.[1] | @base64d | fromjson'"
+
+# Linux version of OSX pbcopy and pbpaste.
+# alias pbcopy=’xsel — clipboard — input’
+# alias pbpaste=’xsel — clipboard — output’
