@@ -15,8 +15,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'hashivim/vim-terraform'
-Plug 'jvirtanen/vim-hcl'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 set laststatus=2
@@ -26,6 +25,9 @@ let mapleader = ";"
 nnoremap <silent> <Leader>t :FloatermToggle<CR>
 tnoremap <silent> <Leader>t <C-\><C-n>:FloatermToggle<CR>
 
+set background=dark
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'rosepine_moon',
       \ }
+
+colorscheme space-vim-dark 
