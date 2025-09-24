@@ -8,6 +8,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# git clone https://github.com/JannoTjarks/catppuccin-zsh.git
+# mkdir ~/.oh-my-zsh/themes/catppuccin-flavors
+# ln catppuccin-zsh/catppuccin.zsh-theme ~/.oh-my-zsh/themes/
+# ln catppuccin-zsh/catppuccin-flavors/* ~/.oh-my-zsh/themes/catppuccin-flavors
 ZSH_THEME="catppuccin"
 CATPPUCCIN_FLAVOR="mocha"
 
