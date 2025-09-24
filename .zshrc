@@ -8,7 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="catppuccin"
+CATPPUCCIN_FLAVOR="mocha"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -19,35 +20,37 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export VISUAL=vim
-export NODE_ENV=development
+# User configuration
+# EDITOR
+export VISUAL=nvim
+export EDITOR=nvim
 
 autoload -U compinit && compinit -i
 
+# HOMEBREW
 # >:(
 export HOMEBREW_NO_AUTO_UPDATE=1
 # D:<
 export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1
 
-alias k=kubectl
-alias jwtdecode="jq -rR 'split(\".\") | .[0],.[1] | @base64d | fromjson'"
+# POWERLEVEL10K
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# GOLANG
+GOPATH=~/go
 
 # Linux version of OSX pbcopy and pbpaste.
 # alias pbcopy=’xsel — clipboard — input’
 # alias pbpaste=’xsel — clipboard — output’
+
+# NODE.JS
+export NODE_ENV=development
+
+# ALIAS
+alias k=kubectl
+alias jwt="jq -rR 'split(\".\") | .[0],.[1] | @base64d | fromjson'"
+alias docker="podman"
+alias vim="nvim"
